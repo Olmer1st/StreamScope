@@ -11,4 +11,3 @@
 - GAP_EXCEEDED: inspect synthetic reproduction, threshold and tolerance. This is not proof of model or server delay.
 - CONNECTION_FAILED: check the host, port, network and TLS certificate. No insecure bypass is provided and sensitive transport errors are not echoed.
 - Missing old events: the display retains 256; inspect evicted counter. Aggregate counts and max gap cover the full capture.
-- Git uses the wrong account: follow github.md and verify the local helper. Never copy tokens into config or issue reports.

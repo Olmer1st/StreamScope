@@ -1,9 +1,5 @@
 # Decisions
 
-## 001 — Scope and precedence
-
-Implement all five milestones as requested by the maintainer; embedded “Round N ONLY” prompts describe stage boundaries, not a restriction on the user's all-round request. The user explicitly authorized direct file edits and checks, superseding patch-only instructions for this task. No pre-existing tracked source or commits existed. Tests are part of the explicitly requested handoff acceptance gates. No fabricated per-round commits or approvals.
-
 ## 002 — Bounded state instead of event queue
 
 Use a bounded ring under a short-lived Mutex plus watch cancellation. A queued per-event channel would apply backpressure or require redundant overflow policies. The single shared bounded model coalesces rendering without losing aggregate counts and keeps freeze independent from capture. See architecture.md. Rust lesson: explicit ownership and no lock across awaits.
@@ -16,9 +12,9 @@ Invalid UTF-8 and unterminated blocks fail rather than applying browser replacem
 
 Serialize allowlisted report fields, never internal event structs or raw errors. Redact all header values rather than relying on a secret-name denylist. Hide query, fragment, and credentials; reject userinfo. Do not follow redirects. Exit 4 groups protocol/runtime failures; finding codes preserve distinctions. Empty streams are inconclusive. Thresholds are strict greater-than plus explicit tolerance. Rust lesson: typed contracts at the CLI boundary.
 
-## 005 — Reproducible tooling and local account identity
+## 005 — Reproducible tooling
 
-Pin Rust 1.90.0, commit Cargo.lock, and use synthetic fixed-delay fixtures. The existing global compiler was 1.66.1. Use four small crates, with publish=false until legal/release approval. Olmer1st's credentials stay in gh's keyring; a repo-local Git helper explicitly selects that account, leaving adcore-dev active globally. Commit email uses GitHub's ID-based noreply form. Git author and GitHub authentication are independent.
+Pin Rust 1.90.0 and Cargo.lock, use synthetic fixed-delay fixtures, and keep four small crates. Registry publication remains disabled pending licensing and release preparation.
 
 ## 006 — Honest release hold
 

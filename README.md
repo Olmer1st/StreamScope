@@ -38,7 +38,7 @@ cargo install --locked --path crates/streamscope-cli
 streamscope --help
 ```
 
-Path dependencies require the workspace checkout. Installation was verified with an isolated `--root` destination; the default Cargo destination command above was not executed in this sandbox. Registry publication is disabled until licensing and release decisions are complete.
+Path dependencies require the workspace checkout. Registry publication is disabled until licensing and release decisions are complete.
 
 ## Test
 
@@ -77,7 +77,3 @@ Read the [CLI contract](docs/cli.md), [protocol rules](docs/protocol.md), [archi
 ## License
 
 PENDING_OWNER_DECISION: MIT or Apache-2.0 must be selected by the maintainer. No reuse license is granted yet, and no placeholder LICENSE or SPDX license claim is supplied. Third-party dependencies retain their own licenses; see [provenance](docs/provenance.md). Public release is on HOLD.
-
-## GitHub identity
-
-[Repository account setup](docs/github.md) explains the repository-local Olmer1st helper. It does not switch your globally active GitHub account or store tokens in this project.

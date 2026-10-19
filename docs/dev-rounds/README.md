@@ -12,4 +12,4 @@ The five milestones were implemented and validated cumulatively in one session o
 
 Local gates: 18 tests, fmt, strict Clippy, debug/release builds, dependency advisory scan, release CLI scenario matrix, clean-source path installation. Evidence: [validation](../validation.md), [actual reports](../demo-results.json), [actual terminal recording](../demo.cast).
 
-Owner work: select MIT or Apache-2.0 and confirm copyright notice; configure/verify private vulnerability reporting; authorize a public source push only after legal/privacy review; run hosted CI and evaluate macOS; decide whether crates.io publication is wanted and resolve internal crate publication order. Normal local git operations are configured for Olmer1st without switching the active global account.
+Owner work: select MIT or Apache-2.0 and confirm copyright notice; configure/verify private vulnerability reporting; authorize a public source push only after legal/privacy review; run hosted CI and evaluate macOS; decide whether crates.io publication is wanted and resolve internal crate publication order.
