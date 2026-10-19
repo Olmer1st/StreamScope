@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible issue using synthetic data only.
+body:
+  - type: markdown
+    attributes:
+      value: Do not post secrets or suspected vulnerabilities. Read SECURITY.md for private reporting status.
+  - type: input
+    id: environment
+    attributes:
+      label: Version, OS, terminal, and transport
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic reproduction and sanitized sample
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true

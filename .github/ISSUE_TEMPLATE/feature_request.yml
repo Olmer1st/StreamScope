@@ -1,0 +1,15 @@
+name: Feature request
+description: Propose a focused SSE debugging improvement.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem and synthetic example
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed behavior, alternatives, privacy and scope implications
+    validations:
+      required: true

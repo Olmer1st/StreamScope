@@ -1,0 +1,24 @@
+┌──────────────────────────────────────────────────────────────────────────────┐
+│StreamScope  LIVE  Eof  5.0s                                                  │
+│HTTP Some(200)  events 4  bytes 0  evicted 0                                  │
+│Client-observed: first byte Some(10)ms  first event Some(150)ms  max gap Some(│
+└──────────────────────────────────────────────────────────────────────────────┘
+┌Events (bounded to 256)───────────────────────────────────────────────────────▲
+│#      elapsed    gap        event        bytes   gap timeline                ║
+│1      150ms      0ms        delta        40                                  █
+│2      300ms      150ms      delta        40      ▇                           █
+│3      4400ms     4100ms     delta        40      ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇█
+│4      4550ms     150ms      done         40      ▇                           █
+│                                                                              █
+│                                                                              █
+│                                                                              █
+│                                                                              █
+│                                                                              ║
+└──────────────────────────────────────────────────────────────────────────────▼
+┌Live payload preview (never saved)────────────────────────────────────────────┐
+│Event 3 • 40 bytes • preview ≤512 characters                                  │
+│synthetic 3                                                                   │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+j/k ↑/↓ navigate • space freeze view • q quit • Ctrl-C interrupt
+GAP_EXCEEDED

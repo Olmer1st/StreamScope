@@ -1,0 +1,23 @@
+[package]
+name = "streamscope-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+description = "Local-first SSE framing and client-observed timing inspector"
+publish = false
+
+[[bin]]
+name = "streamscope"
+path = "src/main.rs"
+
+[dependencies]
+streamscope-core = { path = "../streamscope-core", version = "0.1.0" }
+streamscope-fixtures = { path = "../streamscope-fixtures", version = "0.1.0" }
+streamscope-tui = { path = "../streamscope-tui", version = "0.1.0" }
+tokio.workspace = true
+serde_json.workspace = true
+clap = { version = "4.5", features = ["derive"] }
+
+[dev-dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"] }

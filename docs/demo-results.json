@@ -1,0 +1,192 @@
+[
+  {
+    "scenario": "normal",
+    "exitCode": 0,
+    "report": {
+      "schemaVersion": "streamscope-report/v1",
+      "mode": "check",
+      "target": "http://127.0.0.1:39395/events",
+      "verdict": "PASS",
+      "exitCode": 0,
+      "transport": {
+        "httpStatus": 200,
+        "contentType": "text/event-stream"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "totalBytes": 171,
+        "headersMs": 0,
+        "firstByteMs": 151,
+        "firstEventMs": 151,
+        "latestGapMs": 154,
+        "minObservedGapMs": 151,
+        "maxObservedGapMs": 154,
+        "medianRecentGapMs": 151,
+        "comments": 0,
+        "evictedEvents": 0,
+        "droppedFindings": 0
+      },
+      "findings": [],
+      "endReason": "EOF",
+      "notes": [
+        "Timings are client observations, not server execution timings",
+        "Median uses at most 2048 recent inter-event gaps; payloads and headers are excluded"
+      ]
+    }
+  },
+  {
+    "scenario": "gap",
+    "exitCode": 2,
+    "report": {
+      "schemaVersion": "streamscope-report/v1",
+      "mode": "check",
+      "target": "http://127.0.0.1:45635/events",
+      "verdict": "FAIL",
+      "exitCode": 2,
+      "transport": {
+        "httpStatus": 200,
+        "contentType": "text/event-stream"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "totalBytes": 171,
+        "headersMs": 0,
+        "firstByteMs": 151,
+        "firstEventMs": 151,
+        "latestGapMs": 151,
+        "minObservedGapMs": 151,
+        "maxObservedGapMs": 4101,
+        "medianRecentGapMs": 152,
+        "comments": 0,
+        "evictedEvents": 0,
+        "droppedFindings": 0
+      },
+      "findings": [
+        {
+          "code": "GAP_EXCEEDED",
+          "eventOrdinal": 3,
+          "observedMs": 4101,
+          "thresholdMs": 1500
+        }
+      ],
+      "endReason": "EOF",
+      "notes": [
+        "Timings are client observations, not server execution timings",
+        "Median uses at most 2048 recent inter-event gaps; payloads and headers are excluded"
+      ]
+    }
+  },
+  {
+    "scenario": "burst",
+    "exitCode": 0,
+    "report": {
+      "schemaVersion": "streamscope-report/v1",
+      "mode": "check",
+      "target": "http://127.0.0.1:33677/events",
+      "verdict": "PASS",
+      "exitCode": 0,
+      "transport": {
+        "httpStatus": 200,
+        "contentType": "text/event-stream"
+      },
+      "metrics": {
+        "eventCount": 4,
+        "totalBytes": 171,
+        "headersMs": 0,
+        "firstByteMs": 1,
+        "firstEventMs": 1,
+        "latestGapMs": 1,
+        "minObservedGapMs": 1,
+        "maxObservedGapMs": 2,
+        "medianRecentGapMs": 1,
+        "comments": 0,
+        "evictedEvents": 0,
+        "droppedFindings": 0
+      },
+      "findings": [],
+      "endReason": "EOF",
+      "notes": [
+        "Timings are client observations, not server execution timings",
+        "Median uses at most 2048 recent inter-event gaps; payloads and headers are excluded"
+      ]
+    }
+  },
+  {
+    "scenario": "truncated",
+    "exitCode": 2,
+    "report": {
+      "schemaVersion": "streamscope-report/v1",
+      "mode": "check",
+      "target": "http://127.0.0.1:46463/events",
+      "verdict": "FAIL",
+      "exitCode": 2,
+      "transport": {
+        "httpStatus": 200,
+        "contentType": "text/event-stream"
+      },
+      "metrics": {
+        "eventCount": 3,
+        "totalBytes": 129,
+        "headersMs": 0,
+        "firstByteMs": 151,
+        "firstEventMs": 151,
+        "latestGapMs": 151,
+        "minObservedGapMs": 151,
+        "maxObservedGapMs": 151,
+        "medianRecentGapMs": 151,
+        "comments": 0,
+        "evictedEvents": 0,
+        "droppedFindings": 0
+      },
+      "findings": [
+        {
+          "code": "MISSING_LAST_EVENT"
+        }
+      ],
+      "endReason": "EOF",
+      "notes": [
+        "Timings are client observations, not server execution timings",
+        "Median uses at most 2048 recent inter-event gaps; payloads and headers are excluded"
+      ]
+    }
+  },
+  {
+    "scenario": "bad-utf8",
+    "exitCode": 4,
+    "report": {
+      "schemaVersion": "streamscope-report/v1",
+      "mode": "check",
+      "target": "http://127.0.0.1:37829/events",
+      "verdict": "TRANSPORT_ERROR",
+      "exitCode": 4,
+      "transport": {
+        "httpStatus": 200,
+        "contentType": "text/event-stream"
+      },
+      "metrics": {
+        "eventCount": 2,
+        "totalBytes": 95,
+        "headersMs": 0,
+        "firstByteMs": 152,
+        "firstEventMs": 152,
+        "latestGapMs": 151,
+        "minObservedGapMs": 151,
+        "maxObservedGapMs": 151,
+        "medianRecentGapMs": 151,
+        "comments": 0,
+        "evictedEvents": 0,
+        "droppedFindings": 0
+      },
+      "findings": [
+        {
+          "code": "INVALID_UTF8"
+        }
+      ],
+      "endReason": "PROTOCOL",
+      "notes": [
+        "Timings are client observations, not server execution timings",
+        "Median uses at most 2048 recent inter-event gaps; payloads and headers are excluded"
+      ]
+    }
+  }
+]
