@@ -29,3 +29,7 @@ Use a short original conduct policy to avoid implying adoption of an established
 The initial Ratatui 0.29 dependency graph included unmaintained paste and unsound lru 0.12.5 (RUSTSEC-2024-0436, RUSTSEC-2026-0002, RUSTSEC-2026-0253). Updated to Ratatui 0.30.2 with only the Crossterm backend enabled and matched Crossterm 0.29 to avoid duplicate backend versions. The updated graph passes the current advisory database scan.
 
 A repeated full gate exposed a real demo cancellation race: graceful server completion could win the select and return 0 instead of 130. Register Unix SIGINT synchronously before readiness and check the cancellation state when the server completes. The existing signal test caught the failure; rerun it after the fix. No arbitrary startup sleeps were added.
+
+## 009 — Tag-triggered GitHub releases
+
+Reuse the existing read-only Linux/macOS check matrix through workflow_call; tag-triggered releases add packaging only after all normal checks pass. Validate SemVer, exact Cargo version, and ancestry on main before building. Only the final publication job receives contents: write through GITHUB_TOKEN. Native binaries ship with root and upstream notices, version/target metadata, and verified SHA-256 checksums. Upload to a draft before publishing. Reject existing releases rather than overwriting them; crates.io, signing, and Windows remain separate work.

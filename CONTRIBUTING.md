@@ -7,3 +7,5 @@ Use Rust 1.90.0 and Cargo. Run the README demo, format check, Clippy with warnin
 Discuss substantial changes in an issue first. Bug reports should include version, OS/terminal, a synthetic reproduction, expected/observed behavior, and sanitized diagnostics. Never post credentials or private stream content. Suspected vulnerabilities follow SECURITY.md, not public issues. Submit a focused PR against main, complete the template, and expect maintainer review without a response-time guarantee. Do not change legal ownership or rewrite history.
 
 Update CHANGELOG.md, user documentation, and docs/decisions.md when a contract changes. Before 1.0, incompatible changes are possible but must be documented.
+
+Maintainers: follow [the release process](docs/releases.md). Release tags run the same CI gates before packaging and publication.

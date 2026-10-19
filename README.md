@@ -2,7 +2,7 @@
 
 A local-first Rust tool for developers inspecting **Server-Sent Events (SSE)**: see framing errors, client-observed event gaps, and a live terminal timeline. No accounts, model provider, API keys, telemetry, or database.
 
-**Status:** prototype, proposed 0.1.0. Not published to crates.io. Hosted CI verification is pending. Repository: https://github.com/Olmer1st/StreamScope.
+**Status:** prototype, proposed 0.1.0. Not published to crates.io. Linux and macOS CI checks pass; no release is published yet. Repository: https://github.com/Olmer1st/StreamScope.
 
 ## Try it in 60 seconds
 
@@ -40,6 +40,10 @@ streamscope --help
 
 Path dependencies require the workspace checkout. Registry publication is disabled until release preparation is complete.
 
+## Releases
+
+Version tags trigger checked Linux/macOS binary releases through GitHub Actions. See the [release process](docs/releases.md) for version preparation, assets, and limitations. Ordinary commits run checks without publishing.
+
 ## Test
 
 ```sh
@@ -56,7 +60,7 @@ Tests use fabricated loopback fixtures only; dependency installation needs the r
 | Environment | Status |
 |---|---|
 | Linux x86_64, Rust 1.90.0, terminal/PTY | Validated locally; details in round records |
-| macOS | CI target; UNTESTED locally; do not assume a hosted pass |
+| macOS | Hosted build/test/smoke checks pass; interactive TUI not manually validated |
 | Windows | UNTESTED; terminal behavior not supported yet |
 
 The parser supports LF/CRLF/CR, leading UTF-8 BOM, comments, multiline data, event types, and persistent IDs. Strict invalid UTF-8 and unfinished frames are explicit failures. No reconnect or provider-specific semantics. Default frame cap 1 MiB; previews are 512 Unicode characters; recent-gap median uses at most 2048 gaps. Reports omit payloads, event IDs/types, headers, URL query and fragment. **URL paths remain visible**; avoid secrets in paths. Terminal display is live, potentially sensitive, and not written to disk by the tool. Shell history/process arguments may expose supplied headers; use only synthetic credentials in shared terminals.

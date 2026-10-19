@@ -33,4 +33,13 @@ Evidence: [captured reports](demo-results.json), [terminal recording](demo.cast)
 
 ## Remaining release checks
 
-Hosted Linux/macOS CI has not been verified; Windows is untested. Clean-source onboarding used a source snapshot rather than a committed clone. A private security-reporting route and internal crate publication planning remain pending. A secret-pattern scan is limited evidence, not a guarantee against every possible secret.
+Hosted Linux/macOS Rust checks passed at commit 22ee4bf; the new release workflow has not yet run on GitHub. Windows is untested. Clean-source onboarding used a source snapshot rather than a committed clone. A private security-reporting route and internal crate publication planning remain pending. A secret-pattern scan is limited evidence, not a guarantee against every possible secret.
+
+## Release workflow validation
+
+- actionlint 1.7.12: workflow syntax and expressions passed.
+- Native Linux archive creation and extracted-binary help plus all five synthetic scenarios passed. Root license, upstream notice inventory, target/version metadata and SHA-256 sidecar were included.
+- Fifteen release controls passed: exact version matching; invalid, mismatched and injected tag rejection; stable/prerelease outputs; two-platform assembly; and rejection of missing/duplicate platforms, corrupted checksums, wrong executable architecture, unsafe archive paths, and mismatched metadata. The second-platform assembly fixture was synthetic and never executed/distributed; it is not a macOS build claim.
+- Version validation passed with an empty Cargo cache. Existing 18 Rust tests and formatting checks passed after workflow changes.
+- Security risk: pushing a reviewed version tag authorizes automated publication. Read-only builds are separated from the contents-write publisher, actions are SHA-pinned, archives are checked without executing downloaded candidates in the publisher, and partial uploads remain drafts. Checksums are not release signatures.
+- No version tag, remote release, commit, or push was created by this validation. End-to-end GitHub publication and native macOS packaging remain to be verified on the first release run.

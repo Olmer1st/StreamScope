@@ -1,7 +1,7 @@
 # Roadmap
 
 ## Release preparation
-- Verify GitHub Actions on Linux and macOS before claiming macOS support.
+- Validate the first tag-triggered release end to end; Linux/macOS Rust checks already pass in hosted CI.
 - Configure/verify a private security-reporting route.
 - Review authentic terminal recording and package inventory before authorizing publication.
 - Measure real-world usefulness from voluntary, sanitized reports; no adoption claimed.
