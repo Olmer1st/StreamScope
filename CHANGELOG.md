@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased — proposed 0.1.0
+## 0.1.0-alpha.1 — 2026-10-19
 
 - Tag-triggered GitHub releases reuse Linux/macOS checks, package native binaries and license notices, verify checksums, and publish after both platforms pass.
 - Rust workspace with core decoder, CLI, loopback fixtures, and terminal dashboard.
@@ -10,4 +10,4 @@
 - Timing and terminal-event checks, report/v1, safe output defaults, cancellation, and explicit exit codes.
 - Contributor documentation, CI configuration, authentic demo evidence, and round execution records.
 
-No release, tag, or crates.io publication is claimed. Existing hosted Linux/macOS checks pass; the release workflow awaits its first tag. The project is licensed under Apache-2.0; release preparation remains pending.
+Initial GitHub prerelease. Licensed under Apache-2.0. crates.io publication, Windows binaries, and binary signing are deferred.

@@ -5,7 +5,7 @@ The release workflow runs only when a tag matching `v*` is pushed. Ordinary bran
 ## Prepare a version
 
 1. Finish the changelog and edit `docs/github-release-notes.md` for the release. Verify the security reporting route and review redistributable assets/notices.
-2. Set `workspace.package.version` in Cargo.toml and the internal path dependency version requirements to the intended version. Refresh Cargo.lock and run the normal CI checks. For `v0.1.0-alpha.1`, these versions must be `0.1.0-alpha.1`; the current `0.1.0` manifests intentionally reject that tag until updated.
+2. Set `workspace.package.version` in Cargo.toml and the internal path dependency version requirements to the intended version. Refresh Cargo.lock and run the normal CI checks. For `v0.1.0-alpha.1`, these versions must be `0.1.0-alpha.1`; the manifests must match before the tag is pushed.
 3. Commit and push the reviewed source to main. Create and push the matching tag only when ready to publish. For example, after version preparation:
 
 ```sh
@@ -30,9 +30,9 @@ The workflow uploads assets to a draft first, then publishes it. Existing releas
 Python 3.9+ and the pinned Rust toolchain are required. From a built checkout:
 
 ```sh
-python3 scripts/release.py validate --tag v0.1.0
+python3 scripts/release.py validate --tag v0.1.0-alpha.1
 cargo build --locked --release --workspace
-python3 scripts/release.py package --tag v0.1.0 --output dist
+python3 scripts/release.py package --tag v0.1.0-alpha.1 --output dist
 ```
 
 Use the actual manifest version. Package creation may fetch locked registry metadata/notices and runs the existing synthetic scenario smoke checks against the binary extracted from the archive. It creates a tar.gz and matching .sha256 sidecar; use a fresh output directory for each attempt. Assembly (`verify`) requires two distinct platform candidates; a single local host cannot validate the other host's executable. Local checks do not publish, tag, or contact release APIs.

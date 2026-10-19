@@ -14,9 +14,9 @@ name = "streamscope"
 path = "src/main.rs"
 
 [dependencies]
-streamscope-core = { path = "../streamscope-core", version = "0.1.0" }
-streamscope-fixtures = { path = "../streamscope-fixtures", version = "0.1.0" }
-streamscope-tui = { path = "../streamscope-tui", version = "0.1.0" }
+streamscope-core = { path = "../streamscope-core", version = "0.1.0-alpha.1" }
+streamscope-fixtures = { path = "../streamscope-fixtures", version = "0.1.0-alpha.1" }
+streamscope-tui = { path = "../streamscope-tui", version = "0.1.0-alpha.1" }
 tokio.workspace = true
 serde_json.workspace = true
 clap = { version = "4.5", features = ["derive"] }

@@ -2,7 +2,7 @@
 
 A local-first Rust tool for developers inspecting **Server-Sent Events (SSE)**: see framing errors, client-observed event gaps, and a live terminal timeline. No accounts, model provider, API keys, telemetry, or database.
 
-**Status:** prototype, proposed 0.1.0. Not published to crates.io. Linux and macOS CI checks pass; no release is published yet. Repository: https://github.com/Olmer1st/StreamScope.
+**Status:** prototype, 0.1.0-alpha.1. Not published to crates.io. Linux and macOS CI checks pass. Repository: https://github.com/Olmer1st/StreamScope.
 
 ## Try it in 60 seconds
 

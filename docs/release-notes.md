@@ -1,4 +1,4 @@
-# Proposed 0.1.0 release notes — NOT RELEASED
+# 0.1.0-alpha.1 release preparation
 
 StreamScope inspects SSE framing and client-observed event timing using a live terminal dashboard or headless assertions. It includes fully local synthetic fixtures and bounded memory policies. No model API keys or account are needed to evaluate it.
 
