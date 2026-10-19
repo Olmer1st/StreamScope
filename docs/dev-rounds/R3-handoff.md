@@ -9,14 +9,14 @@
 - Quality gates: local fmt/build/Clippy/tests/release PASS; hosted CI NOT_RUN; publication HOLD. Consult the final validation log for the actual dependency versions and command outputs.
 - Security/privacy check: synthetic loopback data only; query/header/body sentinel tests; allowlisted JSON; no raw errors/HTTP bodies saved; source and artifact token/private-key pattern scan; no existing Git commits. Dependency metadata/license inventory and cargo-audit reviewed. Final audit: zero vulnerability entries and zero warnings after terminal dependency update.
 - Architecture / CLI contract changes: [decisions](../decisions.md), [protocol](../protocol.md), [CLI](../cli.md).
-- Known bugs / incomplete requirements: license choice pending; private vulnerability reporting verified disabled; hosted Linux/macOS Actions not executed. Single-slot bounded shared model replaces the suggested queued event channel. Freeze does not stop capture; eviction count stays live. Forced-panic cleanup is implemented and inspected, but a dedicated panic-injection PTY test was NOT_RUN.
+- Known bugs / incomplete requirements: private vulnerability reporting verified disabled; hosted Linux/macOS Actions not executed. Single-slot bounded shared model replaces the suggested queued event channel. Freeze does not stop capture; eviction count stays live. Forced-panic cleanup is implemented and inspected, but a dedicated panic-injection PTY test was NOT_RUN.
 - Proposed next round only: Stable assertions/reports and end-to-end behavior, completed in R4 during this session.
 - Decision: GO for locally validated engineering; HOLD for complete OSS/public release gates pending the owner decisions and external verification below.
 
 ## Open-source readiness (Round 3)
-- Repository ownership / legal right to publish: Repository access verified; original source and synthetic fixtures. License approval PENDING_OWNER_DECISION.
+- Repository ownership / legal right to publish: Repository access verified; original source and synthetic fixtures. License: Apache-2.0, selected by the maintainer.
 - Remote URL / public status: https://github.com/Olmer1st/StreamScope ; VERIFIED public, initially empty; no content pushed by this session.
-- License file / SPDX identifier / maintainer decision: PENDING_OWNER_DECISION; no placeholder license and no SPDX license claim. Registry publication disabled in all manifests.
+- License file / SPDX identifier / maintainer decision: Root LICENSE: Apache License 2.0; SPDX: Apache-2.0 inherited by all crates; maintainer approved. Registry publication remains disabled pending release preparation.
 - README demo and clean setup: Linux x86_64, Rust 1.90.0; local demo/check and real PTY watch passed. Separate clean-source build/install smoke passed; literal committed clean-clone NOT_RUN because no initial commit. See validation.md for commands and limitations.
 - Contributor and community files: README, CONTRIBUTING, CODE_OF_CONDUCT, SUPPORT, SECURITY, CHANGELOG, ROADMAP, issue/PR templates present; original conduct policy deviation recorded in decisions.md.
 - Security reporting route: NOT_CONFIGURED; GitHub private vulnerability reporting was verified disabled during implementation. No invented email or SLA.
@@ -26,5 +26,5 @@
 - Public API/config changes: report/v1, stable finding/exit code documentation, strict protocol deviations, and bounded state documented in cli.md/protocol.md/decisions.md; v0.x compatibility caveat present.
 - Packaged-artifact smoke test: package lists inspected for all four crates; core tarball verified. CLI tarball HOLD (unpublished local dependency). Clean-source release path installation and installed-binary scenario matrix PASS; no registry/release artifact published.
 - Release/push authorization: NOT_AUTHORIZED for an actual publication; Publication was not part of implementation validation.
-- Round-specific OSS gate: HOLD — legal/private-reporting/external CI gates remain; stage artifacts are present but no unsupported PASS is claimed.
+- Round-specific OSS gate: HOLD — private-reporting/external CI gates remain; stage artifacts are present but no unsupported PASS is claimed.
 - Next round OSS work: Stable assertions/reports and end-to-end behavior, completed in R4 during this session.

@@ -1,7 +1,6 @@
 # Roadmap
 
 ## Release preparation
-- Choose and approve the repository license and copyright notice.
 - Verify GitHub Actions on Linux and macOS before claiming macOS support.
 - Configure/verify a private security-reporting route.
 - Review authentic terminal recording and package inventory before authorizing publication.

@@ -33,4 +33,4 @@ Evidence: [captured reports](demo-results.json), [terminal recording](demo.cast)
 
 ## Remaining release checks
 
-Hosted Linux/macOS CI has not been verified; Windows is untested. Clean-source onboarding used a source snapshot rather than a committed clone. License approval, a private security-reporting route, and internal crate publication planning remain pending. A secret-pattern scan is limited evidence, not a guarantee against every possible secret.
+Hosted Linux/macOS CI has not been verified; Windows is untested. Clean-source onboarding used a source snapshot rather than a committed clone. A private security-reporting route and internal crate publication planning remain pending. A secret-pattern scan is limited evidence, not a guarantee against every possible secret.

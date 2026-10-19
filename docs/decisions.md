@@ -14,11 +14,11 @@ Serialize allowlisted report fields, never internal event structs or raw errors.
 
 ## 005 — Reproducible tooling
 
-Pin Rust 1.90.0 and Cargo.lock, use synthetic fixed-delay fixtures, and keep four small crates. Registry publication remains disabled pending licensing and release preparation.
+Pin Rust 1.90.0 and Cargo.lock, use synthetic fixed-delay fixtures, and keep four small crates. Registry publication remains disabled pending release preparation.
 
 ## 006 — Honest release hold
 
-No license is selected without the owner's choice. No fake LICENSE, SPDX, release, hosted CI result, or platform validation. Keep source and dependency inventories available locally; clean archive onboarding can be tested before any genuine initial commit exists. Public pushes, tags, and publication require explicit scope authorization. Licensing, private disclosure, and macOS validation remain release gates until verified.
+The maintainer selected Apache-2.0. The root LICENSE contains the complete license text and all crates inherit the Apache-2.0 SPDX identifier. No release, hosted CI result, or platform validation is implied. Keep source and dependency inventories available locally; clean archive onboarding can be tested before any genuine initial commit exists. Public pushes, tags, and publication require explicit scope authorization. Private disclosure and macOS validation remain release gates until verified.
 
 ## 007 — Original conduct policy
 

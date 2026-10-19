@@ -1,6 +1,6 @@
 # Contributing
 
-This is a prototype. License approval is pending; please wait for a final repository license before submitting code for redistribution. No CLA or DCO is required or adopted.
+This is a prototype licensed under the [Apache License, Version 2.0](LICENSE). Contributions are submitted under the same license. No CLA or DCO is required or adopted.
 
 Use Rust 1.90.0 and Cargo. Run the README demo, format check, Clippy with warnings denied, workspace tests, and release build before proposing a change. Tests are entirely synthetic and loopback-only. Include meaningful positive and negative controls when behavior changes, and explain privacy, compatibility, and dependency impacts. Keep core parsing independent of presentation and fixtures.
 

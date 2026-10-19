@@ -2,7 +2,7 @@
 
 A local-first Rust tool for developers inspecting **Server-Sent Events (SSE)**: see framing errors, client-observed event gaps, and a live terminal timeline. No accounts, model provider, API keys, telemetry, or database.
 
-**Status:** prototype, proposed 0.1.0. Not published to crates.io. License approval and hosted CI verification are pending. Repository: https://github.com/Olmer1st/StreamScope.
+**Status:** prototype, proposed 0.1.0. Not published to crates.io. Hosted CI verification is pending. Repository: https://github.com/Olmer1st/StreamScope.
 
 ## Try it in 60 seconds
 
@@ -38,7 +38,7 @@ cargo install --locked --path crates/streamscope-cli
 streamscope --help
 ```
 
-Path dependencies require the workspace checkout. Registry publication is disabled until licensing and release decisions are complete.
+Path dependencies require the workspace checkout. Registry publication is disabled until release preparation is complete.
 
 ## Test
 
@@ -76,4 +76,4 @@ Read the [CLI contract](docs/cli.md), [protocol rules](docs/protocol.md), [archi
 
 ## License
 
-PENDING_OWNER_DECISION: MIT or Apache-2.0 must be selected by the maintainer. No reuse license is granted yet, and no placeholder LICENSE or SPDX license claim is supplied. Third-party dependencies retain their own licenses; see [provenance](docs/provenance.md). Public release is on HOLD.
+Licensed under the [Apache License, Version 2.0](LICENSE) (`Apache-2.0`). Third-party dependencies retain their own licenses; see [provenance](docs/provenance.md).

@@ -2,7 +2,7 @@
 
 New project code implements the maintainer-provided scope and handoff; no upstream implementation or real traffic is copied. Fixtures are fabricated strings and fixed delay scripts. The cast records only these synthetic events; the conduct policy is original text.
 
-Cargo.lock pins registry versions and checksums. This metadata inventory is not legal approval or a guarantee about every upstream file. Preserve upstream notices before distributing binaries. Repository license selection remains pending.
+Cargo.lock pins registry versions and checksums. This metadata inventory is not legal approval or a guarantee about every upstream file. Preserve upstream notices before distributing binaries. Repository license: Apache-2.0; see the root LICENSE.
 
 Resolved registry packages: 227 (includes target-specific and optional packages, not all compiled on Linux).
 

@@ -9,4 +9,4 @@
 - Timing and terminal-event checks, report/v1, safe output defaults, cancellation, and explicit exit codes.
 - Contributor documentation, CI configuration, authentic demo evidence, and round execution records.
 
-No release, tag, crates.io publication, or hosted CI success is claimed. License and release decisions remain pending.
+No release, tag, crates.io publication, or hosted CI success is claimed. The project is licensed under Apache-2.0; release preparation remains pending.
